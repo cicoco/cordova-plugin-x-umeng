@@ -1,0 +1,11 @@
+repositories {
+    maven { url 'https://repo1.maven.org/maven2/' }
+}
+
+
+dependencies {
+    // 友盟基础组件库（所有友盟业务SDK都依赖基础组件库
+  implementation  'com.umeng.umsdk:common:+'// 必选
+  implementation  'com.umeng.umsdk:asms:+'// 必选
+  implementation 'com.umeng.umsdk:apm:+'// U-APM产品包依赖，必选
+}
