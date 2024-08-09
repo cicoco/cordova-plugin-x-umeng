@@ -22,6 +22,9 @@
         [UMAPMCustomLog eTag:@"CDVXUmeng" msg:[NSString stringWithFormat:@"CRASH:%@", [command.arguments description]]];
         return @"Crash";
     }];
+
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 @end
