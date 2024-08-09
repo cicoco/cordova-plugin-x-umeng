@@ -8,6 +8,7 @@
         <clobbers target="cordova.plugins.XUmeng" />
     </js-module>
     <preference name="UMENG_ANDROID_KEY" />
+    <preference name="UMENG_IOS_KEY" />
     <preference name="UMENG_CHANNEL_VALUE" />
     <!-- android -->
     <platform name="android">
@@ -30,5 +31,33 @@
         <source-file src="src/android/MyApplication.java" target-dir="src/unic/cicoco/cordova/umeng" />
         <source-file src="src/android/UmengUtils.java" target-dir="src/unic/cicoco/cordova/umeng" />
         <source-file src="src/android/XUmengPlugin.java" target-dir="src/unic/cicoco/cordova/umeng" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="XUmengPlugin">
+                <param name="ios-package" value="CDVXUmeng"/>
+            </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UmengAppKey">
+            <string>$UMENG_IOS_KEY</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UmengChannel">
+            <string>$UMENG_CHANNEL_VALUE</string>
+        </config-file>
+        <header-file src="src/ios/CDVXUmeng.h" />
+        <source-file src="src/ios/CDVXUmeng.m" />
+        <!-- frameworks -->
+        <!-- <framework src="CoreTelephony.framework" />
+        <framework src="libz.tbd" />
+        <framework src="libsqlite.tbd" />
+        <framework src="libc++.tbd" />
+        <framework src="SystemConfiguration.framework" /> -->
+        <podspec>
+            <pods use-frameworks="true">
+                <pod name="UMCommon" />
+                <pod name="UMDevice" />
+                <pod name="UMAPM" />
+            </pods>
+        </podspec>
     </platform>
 </plugin>

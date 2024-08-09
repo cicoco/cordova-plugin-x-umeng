@@ -1,31 +1,31 @@
 {
-    "name": "cordova-plugin-x-umeng",
-    "version": "1.0.0",
-    "description": "友盟",
-    "cordova": {
-      "id": "cordova-plugin-x-umeng",
-      "platforms": [
-        "android",
-        "ios"
-      ]
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/cicoco/cordova-plugin-x-umeng.git"
-    },
-    "keywords": [
-      "cordova",
-      "cordova-plugin",
-      "cordova-plugin-umeng",
-      "umeng",
-      "umengsdk",
-      "友盟",
-      "友盟应用性能分析"
-    ],
-    "author": "cicoco",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/cicoco/cordova-plugin-x-umeng/issues"
-    },
-    "homepage": "https://github.com/cicoco/cordova-plugin-x-umeng#readme"
-  }
+  "name": "cordova-plugin-x-umeng",
+  "version": "1.0.0",
+  "description": "友盟",
+  "cordova": {
+    "id": "cordova-plugin-x-umeng",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cicoco/cordova-plugin-x-umeng.git"
+  },
+  "keywords": [
+    "cordova",
+    "cordova-plugin",
+    "cordova-plugin-umeng",
+    "umeng",
+    "umengsdk",
+    "友盟",
+    "友盟应用性能分析"
+  ],
+  "author": "cicoco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cicoco/cordova-plugin-x-umeng/issues"
+  },
+  "homepage": "https://github.com/cicoco/cordova-plugin-x-umeng#readme"
+}
