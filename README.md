@@ -20,9 +20,7 @@ cordova.plugins.XUmeng.init(
 2. 崩溃后自定义日志
 ```
 // 按需调用，用于crash后追加的自定义日志，error级别，内容为: CRASH: ${params}, params定义如下
-const params = [{
-    // crash时打印的信息，建议放用户信息，比如 {userId: 1, userName: ""}
-}]
+const params = []
 
 cordova.plugins.XUmeng.registerCrashCallback(
   params,
