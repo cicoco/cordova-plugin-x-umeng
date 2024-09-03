@@ -5,6 +5,7 @@ import android.content.Context;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.LOG;
+import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,6 +35,7 @@ public class XUmengPlugin extends CordovaPlugin {
             String appKey = keys.get(UmengUtils.APPKEY);
             String channel = keys.get(keys.get(UmengUtils.CHANNEL));
             UMConfigure.init(context, appKey, channel, UMConfigure.DEVICE_TYPE_PHONE, null);
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
             return true;
         } else if (action.equals("registerCrashCallback")) {
             UMCrash.registerUMCrashCallback(new IUMCrashCallbackWithType() {
@@ -43,6 +45,9 @@ public class XUmengPlugin extends CordovaPlugin {
                     return "Crash";
                 }
             });
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
+            return true;
+
         }
         return false;
     }
